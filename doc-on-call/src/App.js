@@ -14,7 +14,7 @@ class App extends React.Component {
       <Router>
         <div>
 
-            <Link to ='/VideoPatient'></Link>
+            <Link to ='/VideoPatient'>test</Link>
 
         </div>
         <Switch>
