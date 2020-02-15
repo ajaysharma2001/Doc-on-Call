@@ -21,9 +21,9 @@ class App extends React.Component {
         <Header />
         <Router>
           <div>
-            <Link to ='/VideoPatient'> Test </Link>
-            <Link to ='/DoctorView'> GoTo DoctorView </Link>
-            <Link to ='/PatientView'> PatientView </Link>
+            <Link to ='/VideoPatient'> </Link>
+            <Link to ='/DoctorView'> </Link>
+            <Link to ='/PatientView'></Link>
           </div>
           <Switch>
             <Route exact path="/VideoPatient" component>
