@@ -8,6 +8,7 @@ import FormControlLabel from '@material-ui/core/FormControlLabel';
 import FormControl from '@material-ui/core/FormControl';
 import FormLabel from '@material-ui/core/FormLabel';
 import Button from '@material-ui/core/Button';
+import './Button.css';
 
 
 
@@ -21,7 +22,9 @@ const useStyles = makeStyles(theme => ({
     marginRight: theme.spacing(1),
     width: 700,
   },
-
+  Button: {
+    borderRadius: '20px'
+  }
 }))
 
 export default function PatientView() {
@@ -114,14 +117,13 @@ export default function PatientView() {
         />
       </div>
       <br />
-    </div>
-
-    <div>
+      <div class = "Button">
       <Button variant="outlined" color="secondary">
-      Secondary
+      Submit
       </Button>
       </div>
-      
+      <br />
+    </div>
       </div>
 
 
