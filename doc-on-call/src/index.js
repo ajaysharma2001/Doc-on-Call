@@ -4,9 +4,10 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import App from './App';
 import config from './config';
+import Video from './VideoPatient';
 
 ReactDOM.render(<App />, document.getElementById('root'));
-ReactDOM.render(<App
+ReactDOM.render(<Video
     apiKey={config.API_KEY}
     sessionId={config.SESSION_ID}
     token={config.TOKEN}

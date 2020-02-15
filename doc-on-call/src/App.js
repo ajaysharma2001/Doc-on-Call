@@ -1,7 +1,6 @@
 import React from 'react';
 import './App.css';
 import VideoPatient from './VideoPatient';
-import Login from './Login';
 import { 
   Switch, 
   BrowserRouter as Router, 
@@ -12,14 +11,10 @@ class App extends React.Component {
 
   render() {
     return (
-      <div>
-        <Login />
-        <Router>
+      <Router>
         <div>
 
-
             <Link to ='/VideoPatient'>test</Link>
-
 
         </div>
         <Switch>
@@ -28,8 +23,6 @@ class App extends React.Component {
           </Route>
         </Switch>
       </Router>
-      </div>
-      
     );
   }
 }
