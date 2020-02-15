@@ -35,11 +35,6 @@ class App extends React.Component {
             <Route path="/DoctorView" >
               <DoctorView />
               </Route>
-              <Route path="/PatientView" >
-              <PatientView />
-              </Route>
-
-
             <Route>
               <Login />
             </Route>

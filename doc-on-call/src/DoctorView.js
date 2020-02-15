@@ -4,6 +4,8 @@ import Typography from '@material-ui/core/Typography';
 import { makeStyles } from '@material-ui/core/styles';
 import Container from '@material-ui/core/Container';
 import Link from '@material-ui/core/Link';
+import Button from 'react-bootstrap/Button';
+import { ButtonToolbar } from 'react-bootstrap';
 
 function Copyright() {
   return (
@@ -44,13 +46,16 @@ export default function DoctorView() {
       <CssBaseline />
       <Container component="main" className={classes.main} maxWidth="sm">
         <Typography variant="h2" component="h1" gutterBottom>
-          Sticky footer
+          Hi Mr. Shah,
         </Typography>
         <Typography variant="h5" component="h2" gutterBottom>
-          {'Pin a footer to the bottom of the viewport.'}
-          {'The footer will move as the main element of the page grows.'}
+          {'Click the button to start receiving patient calls'}
         </Typography>
-        <Typography variant="body1">Sticky footer placeholder.</Typography>
+        <ButtonToolbar>
+        <Button variant="primary" size="lg" block>
+          Connect
+          </Button>
+        </ButtonToolbar>
       </Container>
       <footer className={classes.footer}>
         <Container maxWidth="sm">
