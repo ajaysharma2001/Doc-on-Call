@@ -19,71 +19,122 @@ export default function PatientView() {
   const classes = useStyles();
   return (
     <div className={classes.root}>
-    <div>
-     <TextField
-          label="None"
-          id="margin-none"
-          defaultValue="Default Value"
-          className={classes.textField}
-          helperText="Some important text"
+      <div>
+        <TextField
+          id="standard-full-width"
+          label="Name"
+          style={{ margin: 8 }}
+          placeholder="Your Name"
+          fullWidth
+          margin="normal"
+          InputLabelProps={{
+            shrink: true,
+          }}
         />
-        </div>
-        <div>
         <TextField
           label="None"
           id="margin-none"
           defaultValue="Default Value"
           className={classes.textField}
-          helperText="Some important text"
         />
-        </div>
-        <div>
-     <TextField
-          label="None"
-          id="margin-none"
-          defaultValue="Default Value"
-          className={classes.textField}
-          helperText="Some important text"
-        />
-        </div>
-        <div>
         <TextField
           label="None"
-          id="margin-none"
+          id="margin-dense"
           defaultValue="Default Value"
           className={classes.textField}
-          helperText="Some important text"
+          margin="dense"
         />
-        </div>
-        <div>
-     <TextField
-          label="None"
-          id="margin-none"
+        <TextField
+          label="Normal"
+          id="margin-normal"
           defaultValue="Default Value"
           className={classes.textField}
-          helperText="Some important text"
+          margin="normal"
         />
-        </div>
-        <div>
+      </div>
+      <div>
+        <TextField
+          id="filled-full-width"
+          label="Label"
+          style={{ margin: 8 }}
+          placeholder="Placeholder"
+          helperText="Full width!"
+          fullWidth
+          margin="normal"
+          InputLabelProps={{
+            shrink: true,
+          }}
+          variant="filled"
+        />
         <TextField
           label="None"
-          id="margin-none"
+          id="filled-margin-none"
           defaultValue="Default Value"
           className={classes.textField}
           helperText="Some important text"
+          variant="filled"
         />
-        </div>
+        <TextField
+          label="Dense"
+          id="filled-margin-dense"
+          defaultValue="Default Value"
+          className={classes.textField}
+          helperText="Some important text"
+          margin="dense"
+          variant="filled"
+        />
+        <TextField
+          label="Normal"
+          id="filled-margin-normal"
+          defaultValue="Default Value"
+          className={classes.textField}
+          helperText="Some important text"
+          margin="normal"
+          variant="filled"
+        />
+      </div>
+      <div>
+        <TextField
+          id="outlined-full-width"
+          label="Label"
+          style={{ margin: 8 }}
+          placeholder="Placeholder"
+          helperText="Full width!"
+          fullWidth
+          margin="normal"
+          InputLabelProps={{
+            shrink: true,
+          }}
+          variant="outlined"
+        />
+        <TextField
+          label="None"
+          id="outlined-margin-none"
+          defaultValue="Default Value"
+          className={classes.textField}
+          helperText="Some important text"
+          variant="outlined"
+        />
+        <TextField
+          label="Dense"
+          id="outlined-margin-dense"
+          defaultValue="Default Value"
+          className={classes.textField}
+          helperText="Some important text"
+          margin="dense"
+          variant="outlined"
+        />
+        <TextField
+          label="Normal"
+          id="outlined-margin-normal"
+          defaultValue="Default Value"
+          className={classes.textField}
+          helperText="Some important text"
+          margin="normal"
+          variant="outlined"
+        />
+      </div>
     </div>
-
 
   )
 }
-
-const headerStyle = {
-    background: '#267',
-    color: '#fff',
-    textAlign: 'center',
-    padding: '10px',
-    fontFamily: 'Hevatica',
-    fontSize: "22px",
-  }
