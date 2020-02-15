@@ -12,6 +12,7 @@ import LockOutlinedIcon from '@material-ui/icons/LockOutlined';
 import Typography from '@material-ui/core/Typography';
 import { makeStyles } from '@material-ui/core/styles';
 import Container from '@material-ui/core/Container';
+import './Login.css';
 
 function Copyright() {
   return (
@@ -47,6 +48,7 @@ const useStyles = makeStyles(theme => ({
     margin: theme.spacing(3, 2, 2),
     justifyContent: 'center',
     alignItems: 'center',
+    display: 'flex-inline',
   },
   boxes: {
     display: 'flex',
@@ -55,12 +57,12 @@ const useStyles = makeStyles(theme => ({
     justifyContent: 'center',
     padding: 2,
   },
-  bottom: {
+  forgot: {
     marginTop: theme.spacing(-3),
-    display: 'flex',
-    flexDirection: 'column',
-    justifyContent: 'center',
-    alignItems: 'center',
+    textAlign: 'center',
+  },
+  bottom: {
+    alignContent: 'center',
   },
 }));
 
@@ -71,12 +73,8 @@ export default function SignIn() {
     <Container component="main" maxWidth="xs">
       <CssBaseline />
       <div className={classes.paper}>
-        <Avatar className={classes.avatar}>
-          <LockOutlinedIcon />
-        </Avatar>
-        <Typography component="h1" variant="h5">
-          Welcome!
-        </Typography>
+        <Avatar className={classes.avatar}><LockOutlinedIcon /></Avatar>
+        <Typography component="h1" variant="h5">Welcome!</Typography>
         <form className={classes.form} noValidate>
           <TextField
             variant="outlined"
@@ -107,40 +105,15 @@ export default function SignIn() {
         </form>
       </div>  
       <div className={classes.boxes}>
-        <Button
-            type="submit"
-            fullWidth
-            variant="contained"
-            color="primary"
-            className={classes.submit}
-        >
-            Sign In (Patient)
-        </Button>
-          
-        <Button
-            type="submit"
-            fullWidth
-            variant="contained"
-            color="primary"
-            className={classes.submit}
-        >
-            Sign In (Doctor)
-        </Button>
+        <Button type="submit" fullWidth variant="contained" color="primary" className={classes.submit}>Sign In<br></br>(Patient)</Button>
+        <Button type="submit" fullWidth variant="contained" color="primary" className={classes.submit}>Sign In (Doctor)</Button>
       </div>
-          
-      <div className={classes.bottom}>
-          <Grid container>
-            <Grid item xs>
-              <Link href="#" variant="body2">
-                Forgot password?
-              </Link>
-            </Grid>
-            <Grid item>
-              <Link href="#" variant="body2">
-                {"Don't have an account? Sign Up"}
-              </Link>
-            </Grid>
-          </Grid>
+         
+      <div className={classes.forgot}>
+          <Grid container><Grid item xs><Link href="#" variant="body2">Forgot password?</Link></Grid></Grid>
+      </div>
+      <div class="footer">
+          <Grid container><Grid item> <Link href="#" variant="body2">{"Don't have an account? Sign Up"}</Link></Grid></Grid>
       </div>
       <Box mt={8}>
         <Copyright />
