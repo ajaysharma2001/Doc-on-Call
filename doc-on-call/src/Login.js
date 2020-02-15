@@ -10,7 +10,7 @@ import Grid from '@material-ui/core/Grid';
 import Box from '@material-ui/core/Box';
 import LockOutlinedIcon from '@material-ui/icons/LockOutlined';
 import Typography from '@material-ui/core/Typography';
-import { makeStyles } from '@material-ui/core/styles';
+import { makeStyles, withTheme } from '@material-ui/core/styles';
 import Container from '@material-ui/core/Container';
 import './Login.css';
 
@@ -29,7 +29,7 @@ function Copyright() {
 
 const useStyles = makeStyles(theme => ({
   paper: {
-    marginTop: theme.spacing(8),
+    marginTop: theme.spacing(2),
     display: 'flex',
     flexDirection: 'column',
     justifyContent: 'center',
@@ -105,19 +105,13 @@ export default function SignIn() {
         </form>
       </div>  
       <div className={classes.boxes}>
-        <Button type="submit" fullWidth variant="contained" color="primary" className={classes.submit}>Sign In<br></br>(Patient)</Button>
-        <Button type="submit" fullWidth variant="contained" color="primary" className={classes.submit}>Sign In (Doctor)</Button>
+        <Button type="submit" fullWidth variant="contained" colorInherit="primary" className={classes.submit}><a href="./PatientView">Sign In<br></br>(Patient)</a></Button>
+        <Button type="submit" fullWidth variant="contained" colorInherit="primary" className={classes.submit}><a href="./DoctorView">Sign In<br></br>(Doctor)</a></Button>
       </div>
          
       <div className={classes.forgot}>
-          <Grid container><Grid item xs><Link href="#" variant="body2">Forgot password?</Link></Grid></Grid>
+          <Grid container><Grid item xs><Link href="#" variant="body2">Forgot password?</Link><br></br><Link href="#" variant = "body2">Don't have an account? Sign Up</Link></Grid></Grid>
       </div>
-      <div class="footer">
-          <Grid container><Grid item> <Link href="#" variant="body2">{"Don't have an account? Sign Up"}</Link></Grid></Grid>
-      </div>
-      <Box mt={8}>
-        <Copyright />
-      </Box>
     </Container>
   );
 }
