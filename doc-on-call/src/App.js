@@ -19,6 +19,7 @@ class App extends React.Component {
     return (
       <div>
         <PatientView />
+        
         <Header />
         <Router>
           <div>
@@ -32,7 +33,10 @@ class App extends React.Component {
               sessionId={config.SESSION_ID}
               token={config.TOKEN}></VideoPatient>
             </Route>
-            <Route exact path="/DoctorView" component></Route>
+            <Route path="/DoctorView" >
+              <DoctorView />
+              </Route>
+
             <Route>
               <Login />
             </Route>
