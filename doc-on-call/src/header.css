@@ -1,0 +1,15 @@
+h1 
+{ 
+	font-family: Lato, sans-serif;
+	text-decoration-color: white
+
+}
+header
+ {
+	background: rgb(66,91,255);
+background: radial-gradient(circle, rgba(66,91,255,1) 0%, rgba(161,174,255,1) 100%);
+box-shadow: 0px 7px 25px gray;
+
+
+
+}

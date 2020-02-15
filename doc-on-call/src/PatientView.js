@@ -20,7 +20,7 @@ const useStyles = makeStyles(theme => ({
   textField: {
     marginLeft: theme.spacing(1),
     marginRight: theme.spacing(1),
-    width: 700,
+    width: window.screen.width/2.055,
   },
   Button: {
     borderRadius: '20px'
@@ -41,24 +41,45 @@ export default function PatientView() {
         <TextField
           id="standard-full-width"
           label="Name"
-          style={{ margin: 8 }}
           placeholder=""
-          fullWidth
+          className={classes.textField}
           margin="dense"
+          variant="filled"
         />
         <TextField
           label="Date of Birth"
           id="margin-none"
           defaultValue=""
           margin="dense"
+          fullWidth
           className={classes.textField}
+          variant="filled"
         />
         <TextField
           label="Gender"
           id="margin-dense"
           defaultValue=""
           className={classes.textField}
+          fullWidth
           margin="dense"
+          variant="filled"
+        />
+        <TextField
+          label="Telephone Number"
+          id="margin-none"
+          placeholder="(647)"
+          margin="dense"
+          fullWidth
+          className={classes.textField}
+          variant="filled"
+        />
+        <TextField
+          id="standard-full-width"
+          label="Is there anything you would like us to know about your medical history?"
+          placeholder="N/A"
+          className={classes.textField}
+          margin="dense"
+          variant="filled"
         />
         <TextField
           label="Have you used Doc On Call before?"
@@ -66,50 +87,27 @@ export default function PatientView() {
           defaultValue=""
           className={classes.textField}
           margin="dense"
+          variant="filled"
         />
-      </div>
-      <div>
         <TextField
           id="filled-full-width"
-          label="What brought you in today"
-          style={{ margin: 8 }}
+          label="What brought you in today?"
           placeholder="What is your current issue?"
           helperText=" "
-          fullWidth
-          margin="dense"
-          variant="filled"
-        />
-        <TextField
-          label="Telephone"
-          id="filled-margin-none"
-          placeholder="647-"
           className={classes.textField}
-          helperText=" "
-          margin="dense"
-          variant="filled"
-        />
-        <br />
-        <TextField
-          label="Is there anything you would like us to know in terms of your medical history"
-          id="filled-margin-normal"
-          placeholder="Nothing"
-          className={classes.textField}
-          helperText=" "
           margin="dense"
           variant="filled"
         />
          <TextField
           id="filled-full-width"
-          label="What languages do you prefer your doctor spoke"
-          style={{ margin: 8 }}
+          label="What languages are you comfortable with?"
           placeholder="English"
           helperText=" "
-          fullWidth
+          className={classes.textField}
           margin="dense"
           variant="filled"
         />
       </div>
-      <br />
       <div class = "Button">
       <form action="./VideoPatient">
       <Button type="submit" variant="outlined" color="secondary">
