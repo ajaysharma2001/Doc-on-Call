@@ -28,6 +28,7 @@ class VideoPatient extends React.Component {
 
   render() {
     return (
+        
       <OTSession
         apiKey={this.props.apiKey}
         sessionId={this.props.sessionId}
