@@ -3,8 +3,6 @@ import * as serviceWorker from './serviceWorker';
 import React from 'react';
 import ReactDOM from 'react-dom';
 import App from './App';
-import config from './config';
-import Video from './VideoPatient';
 
 ReactDOM.render(<App />, document.getElementById('root'));
 /*ReactDOM.render(<Video

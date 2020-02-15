@@ -13,8 +13,6 @@ class App extends React.Component {
 
   render() {
     return (
-      <div>
-        <Login />
         <Router>
         <div>
 
@@ -22,15 +20,20 @@ class App extends React.Component {
 
         </div>
         <Switch>
-          <Route path="/VideoPatient">
+          <Route exact path="/VideoPatient" component>
           <VideoPatient
             apiKey={config.API_KEY}
             sessionId={config.SESSION_ID}
             token={config.TOKEN}></VideoPatient>
           </Route>
+
+          <Route>
+            <Login />
+          </Route>
+
+
         </Switch>
       </Router>
-      </div>
       
     );
   }
