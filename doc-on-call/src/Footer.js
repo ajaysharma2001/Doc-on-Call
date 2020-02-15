@@ -1,18 +1,16 @@
 import React from 'react';
-import './DoctorView.css';
 import CssBaseline from '@material-ui/core/CssBaseline';
 import Typography from '@material-ui/core/Typography';
 import { makeStyles } from '@material-ui/core/styles';
 import Container from '@material-ui/core/Container';
 import Link from '@material-ui/core/Link';
-import Button from 'react-bootstrap/Button';
 
 function Copyright() {
   return (
     <Typography variant="body2" color="textSecondary">
       {'Copyright © '}
       <Link color="inherit" href="https://material-ui.com/">
-        Doc on Call
+        Your Website
       </Link>{' '}
       {new Date().getFullYear()}
       {'.'}
@@ -32,37 +30,24 @@ const useStyles = makeStyles(theme => ({
   },
   footer: {
     padding: theme.spacing(3, 2),
-    marginTop: 'auto',
+    
     backgroundColor:
       theme.palette.type === 'dark' ? theme.palette.grey[800] : theme.palette.grey[200],
   },
 }));
 
-export default function DoctorView() {
+export default function Footer() {
   const classes = useStyles();
 
   return (
-    <div class = "Center">
-      <div className={classes.root}>
+    <div className={classes.root}>
       <CssBaseline />
-
-        <div>
-        <Typography variant="h2" component="h1" gutterBottom>
-          Hi Mr. Shah,
-        </Typography>
-        <Typography variant="h5" component="h2" gutterBottom>
-          {'Click the button to start receiving patient calls'}
-        </Typography>
-        <form action="./VideoPatient">
-        <Button type="submit" variant="primary" size="lg" block>
-          Connect
-          </Button>
-          </form>
-        </div>
-        
-
+      <footer className={classes.footer}>
+        <Container maxWidth="sm">
+          <Typography variant="body1">My sticky footer can be found here.</Typography>
+          <Copyright />
+        </Container>
+      </footer>
     </div>
-    </div>
-    
   );
 }

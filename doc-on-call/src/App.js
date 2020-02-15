@@ -5,6 +5,7 @@ import VideoPatient from './VideoPatient';
 import Header from './Header';
 import PatientView from './PatientView';
 import DoctorView from './DoctorView';
+import Footer from './Footer';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import config from './config';
 import { 
@@ -42,7 +43,9 @@ class App extends React.Component {
               <Login />
             </Route>
           </Switch>
+          
         </Router>
+        <Footer />
       </div>
     );
   }
