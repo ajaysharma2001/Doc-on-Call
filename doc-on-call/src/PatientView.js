@@ -1,6 +1,14 @@
 import React from 'react'
 import TextField from '@material-ui/core/TextField';
 import { makeStyles } from '@material-ui/core/styles';
+import Radio from '@material-ui/core/Radio';
+import RadioGroup from '@material-ui/core/RadioGroup';
+import FormHelperText from '@material-ui/core/FormHelperText';
+import FormControlLabel from '@material-ui/core/FormControlLabel';
+import FormControl from '@material-ui/core/FormControl';
+import FormLabel from '@material-ui/core/FormLabel';
+import Button from '@material-ui/core/Button';
+
 
 
 const useStyles = makeStyles(theme => ({
@@ -13,12 +21,19 @@ const useStyles = makeStyles(theme => ({
     marginRight: theme.spacing(1),
     width: 700,
   },
+
 }))
 
 export default function PatientView() {
   const classes = useStyles();
+  const [value, setValue] = React.useState('female');
+  const handleChange = event => {
+    setValue(event.target.value);
+  }
   return (
+
     <div className={classes.root}>
+    <div>
       <div>
         <TextField
           id="standard-full-width"
@@ -32,22 +47,22 @@ export default function PatientView() {
           }}
         />
         <TextField
-          label="None"
+          label="Date of Birth"
           id="margin-none"
-          defaultValue="Default Value"
+          defaultValue="03/10/2001"
           className={classes.textField}
         />
         <TextField
-          label="None"
+          label="Gender"
           id="margin-dense"
-          defaultValue="Default Value"
+          defaultValue=""
           className={classes.textField}
           margin="dense"
         />
         <TextField
-          label="Normal"
+          label="Have you used Doc On Call before?"
           id="margin-normal"
-          defaultValue="Default Value"
+          defaultValue="No"
           className={classes.textField}
           margin="normal"
         />
@@ -55,10 +70,10 @@ export default function PatientView() {
       <div>
         <TextField
           id="filled-full-width"
-          label="Label"
+          label="What brought you in today"
           style={{ margin: 8 }}
-          placeholder="Placeholder"
-          helperText="Full width!"
+          placeholder="What is your current issue?"
+          helperText=" "
           fullWidth
           margin="normal"
           InputLabelProps={{
@@ -67,74 +82,49 @@ export default function PatientView() {
           variant="filled"
         />
         <TextField
-          label="None"
+          label="Telephone"
           id="filled-margin-none"
-          defaultValue="Default Value"
+          defaultValue="647-"
           className={classes.textField}
-          helperText="Some important text"
+          helperText=" "
           variant="filled"
         />
+        <br />
         <TextField
-          label="Dense"
-          id="filled-margin-dense"
-          defaultValue="Default Value"
-          className={classes.textField}
-          helperText="Some important text"
-          margin="dense"
-          variant="filled"
-        />
-        <TextField
-          label="Normal"
+          label="Is there anything you would like us to know in terms of your medical history"
           id="filled-margin-normal"
-          defaultValue="Default Value"
+          defaultValue="Nothing"
           className={classes.textField}
-          helperText="Some important text"
+          helperText=" "
           margin="normal"
           variant="filled"
         />
-      </div>
-      <div>
-        <TextField
-          id="outlined-full-width"
-          label="Label"
+         <TextField
+          id="filled-full-width"
+          label="What languages do you prefer your doctor spoke"
           style={{ margin: 8 }}
-          placeholder="Placeholder"
-          helperText="Full width!"
+          placeholder="English"
+          helperText=" "
           fullWidth
           margin="normal"
           InputLabelProps={{
             shrink: true,
           }}
-          variant="outlined"
-        />
-        <TextField
-          label="None"
-          id="outlined-margin-none"
-          defaultValue="Default Value"
-          className={classes.textField}
-          helperText="Some important text"
-          variant="outlined"
-        />
-        <TextField
-          label="Dense"
-          id="outlined-margin-dense"
-          defaultValue="Default Value"
-          className={classes.textField}
-          helperText="Some important text"
-          margin="dense"
-          variant="outlined"
-        />
-        <TextField
-          label="Normal"
-          id="outlined-margin-normal"
-          defaultValue="Default Value"
-          className={classes.textField}
-          helperText="Some important text"
-          margin="normal"
-          variant="outlined"
+          variant="filled"
         />
       </div>
+      <br />
     </div>
+
+    <div>
+      <Button variant="outlined" color="secondary">
+      Secondary
+      </Button>
+      </div>
+      
+      </div>
+
 
   )
 }
+
