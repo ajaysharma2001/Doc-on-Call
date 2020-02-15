@@ -45,8 +45,8 @@ export default function DoctorView() {
     <div class = "Center">
       <div className={classes.root}>
       <CssBaseline />
-
-        <div>
+      <Container component="main" className={classes.main} maxWidth="sm">
+      <div>
         <Typography variant="h2" component="h1" gutterBottom>
           Hi Mr. Shah,
         </Typography>
@@ -59,6 +59,8 @@ export default function DoctorView() {
           </Button>
           </form>
         </div>
+      </Container>
+        
         
 
     </div>
