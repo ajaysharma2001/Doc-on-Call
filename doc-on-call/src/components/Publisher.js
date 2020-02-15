@@ -14,6 +14,8 @@ class Publisher extends React.Component {
     };
   }
 
+  
+
   setAudio = (audio) => {
     this.setState({ audio });
   }

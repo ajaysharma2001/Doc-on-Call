@@ -1,6 +1,15 @@
 import React from 'react'
 import TextField from '@material-ui/core/TextField';
 import { makeStyles } from '@material-ui/core/styles';
+import Radio from '@material-ui/core/Radio';
+import RadioGroup from '@material-ui/core/RadioGroup';
+import FormHelperText from '@material-ui/core/FormHelperText';
+import FormControlLabel from '@material-ui/core/FormControlLabel';
+import FormControl from '@material-ui/core/FormControl';
+import FormLabel from '@material-ui/core/FormLabel';
+import Button from '@material-ui/core/Button';
+import './Button.css';
+
 
 
 const useStyles = makeStyles(theme => ({
@@ -13,77 +22,111 @@ const useStyles = makeStyles(theme => ({
     marginRight: theme.spacing(1),
     width: 700,
   },
+  Button: {
+    borderRadius: '20px'
+  }
 }))
 
 export default function PatientView() {
   const classes = useStyles();
+  const [value, setValue] = React.useState('female');
+  const handleChange = event => {
+    setValue(event.target.value);
+  }
   return (
+
     <div className={classes.root}>
     <div>
-     <TextField
-          label="None"
-          id="margin-none"
-          defaultValue="Default Value"
-          className={classes.textField}
-          helperText="Some important text"
-        />
-        </div>
-        <div>
+      <div>
         <TextField
-          label="None"
-          id="margin-none"
-          defaultValue="Default Value"
-          className={classes.textField}
-          helperText="Some important text"
+          id="standard-full-width"
+          label="Name"
+          style={{ margin: 8 }}
+          placeholder="Your Name"
+          fullWidth
+          margin="normal"
+          InputLabelProps={{
+            shrink: true,
+          }}
         />
-        </div>
-        <div>
-     <TextField
-          label="None"
-          id="margin-none"
-          defaultValue="Default Value"
-          className={classes.textField}
-          helperText="Some important text"
-        />
-        </div>
-        <div>
         <TextField
-          label="None"
+          label="Date of Birth"
           id="margin-none"
-          defaultValue="Default Value"
+          defaultValue="03/10/2001"
           className={classes.textField}
-          helperText="Some important text"
         />
-        </div>
-        <div>
-     <TextField
-          label="None"
-          id="margin-none"
-          defaultValue="Default Value"
-          className={classes.textField}
-          helperText="Some important text"
-        />
-        </div>
-        <div>
         <TextField
-          label="None"
-          id="margin-none"
-          defaultValue="Default Value"
+          label="Gender"
+          id="margin-dense"
+          defaultValue=""
           className={classes.textField}
-          helperText="Some important text"
+          margin="dense"
         />
-        </div>
+        <TextField
+          label="Have you used Doc On Call before?"
+          id="margin-normal"
+          defaultValue="No"
+          className={classes.textField}
+          margin="normal"
+        />
+      </div>
+      <div>
+        <TextField
+          id="filled-full-width"
+          label="What brought you in today"
+          style={{ margin: 8 }}
+          placeholder="What is your current issue?"
+          helperText=" "
+          fullWidth
+          margin="normal"
+          InputLabelProps={{
+            shrink: true,
+          }}
+          variant="filled"
+        />
+        <TextField
+          label="Telephone"
+          id="filled-margin-none"
+          defaultValue="647-"
+          className={classes.textField}
+          helperText=" "
+          variant="filled"
+        />
+        <br />
+        <TextField
+          label="Is there anything you would like us to know in terms of your medical history"
+          id="filled-margin-normal"
+          defaultValue="Nothing"
+          className={classes.textField}
+          helperText=" "
+          margin="normal"
+          variant="filled"
+        />
+         <TextField
+          id="filled-full-width"
+          label="What languages do you prefer your doctor spoke"
+          style={{ margin: 8 }}
+          placeholder="English"
+          helperText=" "
+          fullWidth
+          margin="normal"
+          InputLabelProps={{
+            shrink: true,
+          }}
+          variant="filled"
+        />
+      </div>
+      <br />
+      <div class = "Button">
+      <Button variant="outlined" color="secondary">
+      Submit
+      </Button>
+      </div>
+      <br />
     </div>
+      </div>
 
 
   )
 }
 
-const headerStyle = {
-    background: '#267',
-    color: '#fff',
-    textAlign: 'center',
-    padding: '10px',
-    fontFamily: 'Hevatica',
-    fontSize: "22px",
-  }
