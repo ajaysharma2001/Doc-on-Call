@@ -31,6 +31,7 @@ const useStyles = makeStyles(theme => ({
     marginTop: theme.spacing(8),
     display: 'flex',
     flexDirection: 'column',
+    justifyContent: 'center',
     alignItems: 'center',
   },
   avatar: {
@@ -43,8 +44,24 @@ const useStyles = makeStyles(theme => ({
 	borderRadius: '25px'
   },
   submit: {
-    margin: theme.spacing(3, 0, 2),
+    margin: theme.spacing(3, 2, 2),
+    justifyContent: 'center',
+    alignItems: 'center',
   },
+  boxes: {
+    display: 'flex',
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'center',
+    padding: 2,
+  },
+  bottom: {
+    marginTop: theme.spacing(-3),
+    display: 'flex',
+    flexDirection: 'column',
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
 }));
 
 export default function SignIn() {
@@ -58,7 +75,7 @@ export default function SignIn() {
           <LockOutlinedIcon />
         </Avatar>
         <Typography component="h1" variant="h5">
-          Sign in
+          Welcome!
         </Typography>
         <form className={classes.form} noValidate>
           <TextField
@@ -87,15 +104,31 @@ export default function SignIn() {
             control={<Checkbox value="remember" color="primary" />}
             label="Remember me"
           />
-          <Button
+        </form>
+      </div>  
+      <div className={classes.boxes}>
+        <Button
             type="submit"
             fullWidth
             variant="contained"
             color="primary"
             className={classes.submit}
-          >
-            Sign In
-          </Button>
+        >
+            Sign In (Patient)
+        </Button>
+          
+        <Button
+            type="submit"
+            fullWidth
+            variant="contained"
+            color="primary"
+            className={classes.submit}
+        >
+            Sign In (Doctor)
+        </Button>
+      </div>
+          
+      <div className={classes.bottom}>
           <Grid container>
             <Grid item xs>
               <Link href="#" variant="body2">
@@ -108,8 +141,7 @@ export default function SignIn() {
               </Link>
             </Grid>
           </Grid>
-        </form>
-      </div>
+      </div>
       <Box mt={8}>
         <Copyright />
       </Box>
