@@ -5,7 +5,6 @@ import { makeStyles } from '@material-ui/core/styles';
 import Container from '@material-ui/core/Container';
 import Link from '@material-ui/core/Link';
 import Button from 'react-bootstrap/Button';
-import { ButtonToolbar } from 'react-bootstrap';
 
 function Copyright() {
   return (
@@ -51,11 +50,11 @@ export default function DoctorView() {
         <Typography variant="h5" component="h2" gutterBottom>
           {'Click the button to start receiving patient calls'}
         </Typography>
-        <ButtonToolbar>
-        <Button variant="primary" size="lg" block>
+        <form action="./VideoPatient">
+        <Button type="submit" variant="primary" size="lg" block>
           Connect
           </Button>
-        </ButtonToolbar>
+          </form>
       </Container>
       <footer className={classes.footer}>
         <Container maxWidth="sm">
