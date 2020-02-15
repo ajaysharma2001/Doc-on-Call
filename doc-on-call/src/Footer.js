@@ -1,4 +1,5 @@
 import React from 'react';
+import './Footer.css';
 import CssBaseline from '@material-ui/core/CssBaseline';
 import Typography from '@material-ui/core/Typography';
 import { makeStyles } from '@material-ui/core/styles';
@@ -30,7 +31,6 @@ const useStyles = makeStyles(theme => ({
   },
   footer: {
     padding: theme.spacing(3, 2),
-    
     backgroundColor:
       theme.palette.type === 'dark' ? theme.palette.grey[800] : theme.palette.grey[200],
   },
