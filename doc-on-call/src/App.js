@@ -1,7 +1,9 @@
 import React from 'react';
 import './App.css';
 import Login from './Login';
-import VideoPatient from './VideoPatient'
+import VideoPatient from './VideoPatient';
+import Header from './Header';
+import 'bootstrap/dist/css/bootstrap.min.css';
 import config from './config';
 import { 
   Switch, 
@@ -13,6 +15,8 @@ class App extends React.Component {
 
   render() {
     return (
+      <div>
+        <Header />
         <Router>
         <div>
 
@@ -34,6 +38,8 @@ class App extends React.Component {
 
         </Switch>
       </Router>
+      </div>
+        
       
     );
   }
