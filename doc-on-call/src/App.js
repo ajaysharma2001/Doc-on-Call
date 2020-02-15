@@ -17,14 +17,13 @@ class App extends React.Component {
 
   render() {
     return (
-      <div>
-        <PatientView />
-        
+      <div>      
         <Header />
         <Router>
           <div>
             <Link to ='/VideoPatient'> Test </Link>
             <Link to ='/DoctorView'> GoTo DoctorView </Link>
+            <Link to ='/PatientView'> PatientView </Link>
           </div>
           <Switch>
             <Route exact path="/VideoPatient" component>
@@ -36,6 +35,10 @@ class App extends React.Component {
             <Route path="/DoctorView" >
               <DoctorView />
               </Route>
+              <Route path="/PatientView" >
+              <PatientView />
+              </Route>
+
 
             <Route>
               <Login />
