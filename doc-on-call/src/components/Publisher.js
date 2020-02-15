@@ -2,6 +2,20 @@ import React from 'react';
 import { OTPublisher } from 'opentok-react';
 import CheckBox from './CheckBox';
 
+const styles = {
+
+  publisherWindow: {
+
+    height: '155px',
+
+    width: '230px',
+
+    style: { buttonDisplayMode: 'off' },
+
+  },
+
+};
+
 class Publisher extends React.Component {
   constructor(props) {
     super(props);
