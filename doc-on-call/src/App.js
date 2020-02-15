@@ -3,6 +3,7 @@ import './App.css';
 import Login from './Login';
 import VideoPatient from './VideoPatient';
 import Header from './Header';
+import PatientView from './PatientView';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import config from './config';
 import { 
@@ -16,11 +17,12 @@ class App extends React.Component {
   render() {
     return (
       <div>
+      <PatientView />
         <Header />
         <Router>
         <div>
 
-            <Link to ='/VideoPatient'>test</Link>
+            <Link to ='/VideoPatient'> Test </Link>
 
         </div>
         <Switch>
