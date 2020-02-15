@@ -20,7 +20,7 @@ const useStyles = makeStyles(theme => ({
   textField: {
     marginLeft: theme.spacing(1),
     marginRight: theme.spacing(1),
-    width: 700,
+    width: window.screen.width/2.047,
   },
   Button: {
     borderRadius: '20px'
