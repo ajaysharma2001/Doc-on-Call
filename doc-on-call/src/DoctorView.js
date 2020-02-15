@@ -54,7 +54,7 @@ export default function DoctorView() {
           {'Click the button to start receiving patient calls'}
         </Typography>
         <form action="./VideoPatient">
-        <Button type="submit" variant="primary" size="lg" block>
+        <Button type ="submit" variant ="primary" size ="lg" block>
           Connect
           </Button>
           </form>
