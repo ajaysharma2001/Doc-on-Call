@@ -43,7 +43,7 @@ class VideoPatient extends React.Component {
 
         <Publisher />
 
-        <OTStreams>
+        <OTStreams >
           <Subscriber />
         </OTStreams>
 
