@@ -1,6 +1,8 @@
 import React from 'react';
 import './App.css';
-import VideoPatient from './VideoPatient';
+import Login from './Login';
+import VideoPatient from './VideoPatient'
+import config from './config';
 import { 
   Switch, 
   BrowserRouter as Router, 
@@ -11,7 +13,9 @@ class App extends React.Component {
 
   render() {
     return (
-      <Router>
+      <div>
+        <Login />
+        <Router>
         <div>
 
             <Link to ='/VideoPatient'>test</Link>
@@ -19,10 +23,15 @@ class App extends React.Component {
         </div>
         <Switch>
           <Route path="/VideoPatient">
-            <VideoPatient />
+          <VideoPatient
+            apiKey={config.API_KEY}
+            sessionId={config.SESSION_ID}
+            token={config.TOKEN}></VideoPatient>
           </Route>
         </Switch>
       </Router>
+      </div>
+      
     );
   }
 }
