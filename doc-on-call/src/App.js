@@ -17,7 +17,8 @@ class App extends React.Component {
 
   render() {
     return (
-      <div>      
+      <div>
+      <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Lato" />      
         <Header />
         <Router>
           <div>

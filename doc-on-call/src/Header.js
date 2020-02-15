@@ -1,5 +1,5 @@
 import React from 'react'
-
+import './header.css'
 export default function Header() {
   return (
     <header style = {headerStyle}>
@@ -9,10 +9,8 @@ export default function Header() {
 }
 
 const headerStyle = {
-    background: '#267',
-    color: '#fff',
     textAlign: 'center',
     padding: '10px',
-    fontFamily: 'Hevatica',
+    fontFamily: 'Comic-Sans',
     fontSize: "22px",
   }
