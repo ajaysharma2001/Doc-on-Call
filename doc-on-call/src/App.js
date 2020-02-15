@@ -32,6 +32,9 @@ class App extends React.Component {
               sessionId={config.SESSION_ID}
               token={config.TOKEN}></VideoPatient>
             </Route>
+              <Route path="/PatientView" >
+              <PatientView />
+              </Route>
             <Route path="/DoctorView" >
               <DoctorView />
               </Route>
