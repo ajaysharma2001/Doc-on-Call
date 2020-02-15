@@ -6,6 +6,7 @@ import { makeStyles } from '@material-ui/core/styles';
 import Container from '@material-ui/core/Container';
 import Link from '@material-ui/core/Link';
 import Button from 'react-bootstrap/Button';
+import Dashboard from './Dashboard/Dashboard'
 
 function Copyright() {
   return (
@@ -42,9 +43,7 @@ export default function DoctorView() {
   const classes = useStyles();
 
   return (
-  <div>
-    sdlkjfklsdj
-  </div>
+  <Dashboard />
     
   );
 }
