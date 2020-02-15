@@ -20,7 +20,7 @@ const useStyles = makeStyles(theme => ({
   textField: {
     marginLeft: theme.spacing(1),
     marginRight: theme.spacing(1),
-    width: window.screen.width/2.047,
+    width: window.screen.width/2.055,
   },
   Button: {
     borderRadius: '20px'
@@ -65,6 +65,23 @@ export default function PatientView() {
           variant="filled"
         />
         <TextField
+          label="Telephone Number"
+          id="margin-none"
+          placeholder="(647)"
+          margin="dense"
+          fullWidth
+          className={classes.textField}
+          variant="filled"
+        />
+        <TextField
+          id="standard-full-width"
+          label="Is there anything you would like us to know about your medical history?"
+          placeholder="N/A"
+          className={classes.textField}
+          margin="dense"
+          variant="filled"
+        />
+        <TextField
           label="Have you used Doc On Call before?"
           id="margin-normal"
           defaultValue=""
@@ -78,24 +95,6 @@ export default function PatientView() {
           placeholder="What is your current issue?"
           helperText=" "
           className={classes.textField}
-          margin="dense"
-          variant="filled"
-        />
-        <TextField
-          label="Telephone"
-          id="filled-margin-none"
-          placeholder="647-"
-          className={classes.textField}
-          helperText=" "
-          margin="dense"
-          variant="filled"
-        />
-        <TextField
-          id="filled-margin-normal"
-          label="Is there anything you would like us to know in terms of your medical history?"
-          placeholder="Nothing"
-          className={classes.textField}
-          helperText=" "
           margin="dense"
           variant="filled"
         />
