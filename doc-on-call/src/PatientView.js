@@ -42,17 +42,15 @@ export default function PatientView() {
           id="standard-full-width"
           label="Name"
           style={{ margin: 8 }}
-          placeholder="Your Name"
+          placeholder=""
           fullWidth
-          margin="normal"
-          InputLabelProps={{
-            shrink: true,
-          }}
+          margin="dense"
         />
         <TextField
           label="Date of Birth"
           id="margin-none"
-          defaultValue="03/10/2001"
+          defaultValue=""
+          margin="dense"
           className={classes.textField}
         />
         <TextField
@@ -65,9 +63,9 @@ export default function PatientView() {
         <TextField
           label="Have you used Doc On Call before?"
           id="margin-normal"
-          defaultValue="No"
+          defaultValue=""
           className={classes.textField}
-          margin="normal"
+          margin="dense"
         />
       </div>
       <div>
@@ -78,28 +76,26 @@ export default function PatientView() {
           placeholder="What is your current issue?"
           helperText=" "
           fullWidth
-          margin="normal"
-          InputLabelProps={{
-            shrink: true,
-          }}
+          margin="dense"
           variant="filled"
         />
         <TextField
           label="Telephone"
           id="filled-margin-none"
-          defaultValue="647-"
+          placeholder="647-"
           className={classes.textField}
           helperText=" "
+          margin="dense"
           variant="filled"
         />
         <br />
         <TextField
           label="Is there anything you would like us to know in terms of your medical history"
           id="filled-margin-normal"
-          defaultValue="Nothing"
+          placeholder="Nothing"
           className={classes.textField}
           helperText=" "
-          margin="normal"
+          margin="dense"
           variant="filled"
         />
          <TextField
@@ -109,18 +105,17 @@ export default function PatientView() {
           placeholder="English"
           helperText=" "
           fullWidth
-          margin="normal"
-          InputLabelProps={{
-            shrink: true,
-          }}
+          margin="dense"
           variant="filled"
         />
       </div>
       <br />
       <div class = "Button">
-      <Button variant="outlined" color="secondary">
+      <form action="./VideoPatient">
+      <Button type="submit" variant="outlined" color="secondary">
       Submit
       </Button>
+      </form>
       </div>
       <br />
     </div>
