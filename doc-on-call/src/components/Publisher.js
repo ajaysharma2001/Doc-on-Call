@@ -6,9 +6,9 @@ const styles = {
 
   publisherWindow: {
 
-    height: '155px',
+    height: '230px',
 
-    width: '230px',
+    width: '500px',
 
     style: { buttonDisplayMode: 'off' },
 
@@ -27,8 +27,6 @@ class Publisher extends React.Component {
       videoSource: 'camera'
     };
   }
-
-  
 
   setAudio = (audio) => {
     this.setState({ audio });
@@ -57,7 +55,8 @@ class Publisher extends React.Component {
           properties={{
             publishAudio: this.state.audio,
             publishVideo: this.state.video,
-            videoSource: this.state.videoSource === 'screen' ? 'screen' : undefined
+            videoSource: this.state.videoSource === 'screen' ? 'screen' : undefined,
+            height: '100px'
           }}
           onError={this.onError}
         />

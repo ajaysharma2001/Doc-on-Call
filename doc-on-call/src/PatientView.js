@@ -20,6 +20,7 @@ const useStyles = makeStyles(theme => ({
   textField: {
     marginLeft: theme.spacing(1),
     marginRight: theme.spacing(1),
+    marginTop: theme.spacing(3.5),
     width: window.screen.width/2.055,
   },
   Button: {
@@ -34,7 +35,6 @@ export default function PatientView() {
     setValue(event.target.value);
   }
   return (
-
     <div className={classes.root}>
     <div>
       <div>
@@ -55,6 +55,8 @@ export default function PatientView() {
           className={classes.textField}
           variant="filled"
         />
+        <br />
+        <br />
         <TextField
           label="Gender"
           id="margin-dense"
@@ -73,6 +75,8 @@ export default function PatientView() {
           className={classes.textField}
           variant="filled"
         />
+        <br />
+    <br />
         <TextField
           id="standard-full-width"
           label="Is there anything you would like us to know about your medical history?"
@@ -89,6 +93,8 @@ export default function PatientView() {
           margin="dense"
           variant="filled"
         />
+        <br />
+        <br />
         <TextField
           id="filled-full-width"
           label="What brought you in today?"
@@ -107,12 +113,12 @@ export default function PatientView() {
           margin="dense"
           variant="filled"
         />
+        <br />
+        <br />
       </div>
       <div class = "Button">
       <form action="./VideoPatient">
-      <Button type="submit" variant="outlined" color="secondary">
-      Submit
-      </Button>
+      <button type="submit" class="btn btn-primary">Submit</button>
       </form>
       </div>
       <br />

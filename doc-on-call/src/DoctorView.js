@@ -6,6 +6,7 @@ import { makeStyles } from '@material-ui/core/styles';
 import Container from '@material-ui/core/Container';
 import Link from '@material-ui/core/Link';
 import Button from 'react-bootstrap/Button';
+import Dashboard from './Dashboard/Dashboard'
 
 function Copyright() {
   return (
@@ -42,29 +43,7 @@ export default function DoctorView() {
   const classes = useStyles();
 
   return (
-    <div class = "Center">
-      <div className={classes.root}>
-      <CssBaseline />
-      <Container component="main" className={classes.main} maxWidth="sm">
-      <div>
-        <Typography variant="h2" component="h1" gutterBottom>
-          Hi Mr. Shah,
-        </Typography>
-        <Typography variant="h5" component="h2" gutterBottom>
-          {'Click the button to start receiving patient calls'}
-        </Typography>
-        <form action="./VideoPatient">
-        <Button type="submit" variant="primary" size="lg" block>
-          Connect
-          </Button>
-          </form>
-        </div>
-      </Container>
-        
-        
-
-    </div>
-    </div>
+    <Dashboard />
     
   );
 }
