@@ -13,6 +13,7 @@ import Typography from '@material-ui/core/Typography';
 import { makeStyles, withTheme } from '@material-ui/core/styles';
 import Container from '@material-ui/core/Container';
 import './Login.css';
+import './header.css';
 
 function Copyright() {
   return (
@@ -36,7 +37,7 @@ const useStyles = makeStyles(theme => ({
     alignItems: 'center',
   },
   avatar: {
-    margin: theme.spacing(1),
+    margin: 0,
     backgroundColor: theme.palette.secondary.main,
   },
   form: {
@@ -56,10 +57,23 @@ const useStyles = makeStyles(theme => ({
     alignItems: 'center',
     justifyContent: 'center',
     padding: 2,
+    flexWrap: 'wrap',
+    width: '85%',
+  },
+  leftbox: {
+    alignItems: 'center',
+    justifyContent: 'center',
+    marginRight: 50,
+  },
+  rightbox: {
+    alignItems: 'center',
+    justifyContent: 'center',
   },
   forgot: {
     marginTop: theme.spacing(-3),
     textAlign: 'center',
+    marginLeft: -25,
+    marginRight: 10,
   },
   bottom: {
     alignContent: 'center',
@@ -104,9 +118,13 @@ export default function SignIn() {
           />
         </form>
       </div>  
-      <div className={classes.boxes}>
-        <Button type="submit" fullWidth variant="contained" colorInherit="primary" className={classes.submit}><a href="./PatientView">Sign In<br></br>(Patient)</a></Button>
-        <Button type="submit" fullWidth variant="contained" colorInherit="primary" className={classes.submit}><a href="./DoctorView">Sign In<br></br>(Doctor)</a></Button>
+      <div className = {classes.boxes}>
+        <div className = {classes.leftbox}>
+          <form action='./PatientView'><Button type="submit" fullWidth variant="contained" color="primary" className={classes.submit}>Sign In<br></br>(Patient)</Button></form>
+        </div>
+        <div className = {classes.rightbox}>
+          <form action='./DoctorView'><Button type="submit" fullWidth variant="contained" color="primary" className={classes.submit}>Sign In<br></br>(Doctor)</Button></form>
+        </div>
       </div>
          
       <div className={classes.forgot}>
