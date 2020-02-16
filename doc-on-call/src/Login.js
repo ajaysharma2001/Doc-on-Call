@@ -63,11 +63,12 @@ const useStyles = makeStyles(theme => ({
   leftbox: {
     alignItems: 'center',
     justifyContent: 'center',
-    marginRight: 50,
+    marginRight: 25,
   },
   rightbox: {
     alignItems: 'center',
     justifyContent: 'center',
+    marginLeft: 25
   },
   forgot: {
     marginTop: theme.spacing(-3),
