@@ -118,9 +118,7 @@ export default function PatientView() {
       </div>
       <div class = "Button">
       <form action="./VideoPatient">
-      <Button type="submit" variant="outlined" color="secondary">
-      Submit
-      </Button>
+      <button type="submit" class="btn btn-primary">Submit</button>
       </form>
       </div>
       <br />

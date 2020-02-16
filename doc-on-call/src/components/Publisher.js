@@ -6,9 +6,9 @@ const styles = {
 
   publisherWindow: {
 
-    height: '155px',
+    height: '230px',
 
-    width: '230px',
+    width: '500px',
 
     style: { buttonDisplayMode: 'off' },
 
