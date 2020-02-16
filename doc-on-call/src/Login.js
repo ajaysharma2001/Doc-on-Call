@@ -38,11 +38,12 @@ const useStyles = makeStyles(theme => ({
   },
   avatar: {
     margin: 0,
+    marginTop: -25,
     backgroundColor: theme.palette.secondary.main,
   },
   form: {
     width: '100%', // Fix IE 11 issue.
-    marginTop: theme.spacing(1),
+    marginTop: -25,
 	borderRadius: '25px'
   },
   submit: {
@@ -63,18 +64,16 @@ const useStyles = makeStyles(theme => ({
   leftbox: {
     alignItems: 'center',
     justifyContent: 'center',
-    marginRight: 25,
+    marginRight: 50,
   },
   rightbox: {
     alignItems: 'center',
     justifyContent: 'center',
-    marginLeft: 25
+    marginRight: -34,
   },
   forgot: {
     marginTop: theme.spacing(-3),
     textAlign: 'center',
-    marginLeft: -25,
-    marginRight: 10,
   },
   bottom: {
     alignContent: 'center',
