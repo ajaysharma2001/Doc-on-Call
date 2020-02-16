@@ -4,6 +4,27 @@ import { OTSession, OTStreams, preloadScript } from 'opentok-react';
 import ConnectionStatus from './components/ConnectionStatus';
 import Publisher from './components/Publisher';
 import Subscriber from './components/Subscriber';
+import './Video.css';
+import {
+  Badge,
+  Button,
+  ButtonDropdown,
+  ButtonGroup,
+  ButtonToolbar,
+  Card,
+  CardBody,
+  CardFooter,
+  CardHeader,
+  CardTitle,
+  Col,
+  Dropdown,
+  DropdownItem,
+  DropdownMenu,
+  DropdownToggle,
+  Progress,
+  Row,
+  Table,
+} from 'reactstrap';
 
 class VideoPatient extends React.Component {
   constructor(props) {
@@ -28,7 +49,7 @@ class VideoPatient extends React.Component {
 
   render() {
     return (
-        
+      <div>
       <OTSession
         apiKey={this.props.apiKey}
         sessionId={this.props.sessionId}
@@ -39,15 +60,28 @@ class VideoPatient extends React.Component {
 
         {this.state.error ? <div id="error">{this.state.error}</div> : null}
 
-        <ConnectionStatus connected={this.state.connected} />
-
+        <Row>
+        <Col>
+        </Col>
+        <div id = 'Publisher_Screen'>
         <Publisher />
-
+        </div>
+        <Col>
+        </Col>
         <OTStreams >
+        <div id = 'Subscriber_Screen'>
           <Subscriber />
+          </div>
         </OTStreams>
-
+        <Col>
+        </Col>
+        </Row>
       </OTSession>
+      <br />
+      <br />
+      <br />
+      </div>
+
     );
   }
 }

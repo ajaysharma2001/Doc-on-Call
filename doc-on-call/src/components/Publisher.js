@@ -1,6 +1,7 @@
 import React from 'react';
 import { OTPublisher } from 'opentok-react';
 import CheckBox from './CheckBox';
+import '../Video.css'
 
 const styles = {
 
@@ -46,38 +47,20 @@ class Publisher extends React.Component {
 
   render() {
     return (
-      <div className="publisher">
-        Publisher
-
+      <div id="publisher">
         {this.state.error ? <div id="error">{this.state.error}</div> : null}
-
+        <div id = 'Contains_Pub'>
         <OTPublisher
           properties={{
             publishAudio: this.state.audio,
             publishVideo: this.state.video,
             videoSource: this.state.videoSource === 'screen' ? 'screen' : undefined,
-            height: '100px'
+            height: '600px',
+            width: '600px',
           }}
           onError={this.onError}
         />
-
-        <CheckBox
-          label="Share Screen"
-          onChange={this.changeVideoSource}
-        />
-
-        <CheckBox
-          label="Publish Audio"
-          initialChecked={this.state.audio}
-          onChange={this.setAudio}
-        />
-
-        <CheckBox
-          label="Publish Video"
-          initialChecked={this.state.video}
-          onChange={this.setVideo}
-        />
-
+        </div>
       </div>
     );
   }

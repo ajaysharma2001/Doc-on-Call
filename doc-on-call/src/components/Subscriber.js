@@ -2,6 +2,7 @@ import React from 'react';
 
 import { OTSubscriber } from 'opentok-react';
 import CheckBox from './CheckBox';
+import '../Video.css';
 
 class Subscriber extends React.Component {
   constructor(props) {
@@ -29,30 +30,20 @@ class Subscriber extends React.Component {
   render() {
     return (
       <div className="subscriber">
-        Subscriber
 
         {this.state.error ? <div id="error">{this.state.error}</div> : null}
-
+        
+        <div id = 'Contains_Sub'>
         <OTSubscriber
           properties={{
             subscribeToAudio: this.state.audio,
-            subscribeToVideo: this.state.video
+            subscribeToVideo: this.state.video,
+            height: '600px',
+            width: '600px',
           }}
           onError={this.onError}
         />
-
-        <CheckBox
-          label="Subscribe to Audio"
-          initialChecked={this.state.audio}
-          onChange={this.setAudio}
-        />
-
-        <CheckBox
-          label="Subscribe to Video"
-          initialChecked={this.state.video}
-          onChange={this.setVideo}
-        />
-        
+        </div>
       </div>
     );
   }
