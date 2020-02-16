@@ -12,10 +12,10 @@ const headerStyle = {
 
 export default function Header() {
   return (
-    <header className='m'>
-      <div className="left_image"><img id="blank" src="./images/White_Square"></img></div>
-      <div className="middle_title"><font color="white"><h1><b>Doc on Call</b></h1></font></div>
-      <div className="right_image"><img id="logo" src="#"></img></div>
+    <header class='m'>
+      <div class="left_image"><img id="blank" src="img/White_Square.jpg" ></img></div>
+      <div class="middle_title"><font color="white"><h1><b>Doc on Call</b></h1></font></div>
+      <div class="right_image"><img id="logo" src="#"></img></div>
     </header>
   )
 }
