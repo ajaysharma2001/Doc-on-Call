@@ -55,7 +55,7 @@ class Publisher extends React.Component {
             publishAudio: this.state.audio,
             publishVideo: this.state.video,
             videoSource: this.state.videoSource === 'screen' ? 'screen' : undefined,
-            height: '600px',
+            height: '489px',
             width: '600px',
           }}
           onError={this.onError}

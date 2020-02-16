@@ -38,7 +38,7 @@ class Subscriber extends React.Component {
           properties={{
             subscribeToAudio: this.state.audio,
             subscribeToVideo: this.state.video,
-            height: '600px',
+            height: '489px',
             width: '600px',
           }}
           onError={this.onError}
