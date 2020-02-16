@@ -4,6 +4,7 @@ import { OTSession, OTStreams, preloadScript } from 'opentok-react';
 import ConnectionStatus from './components/ConnectionStatus';
 import Publisher from './components/Publisher';
 import Subscriber from './components/Subscriber';
+import MedRecord from './img/Customer-Medical.png'
 import './Video.css';
 import {
   Badge,
@@ -74,6 +75,7 @@ class VideoDoctor extends React.Component {
           </div>
         </OTStreams>
         <Col>
+          <div><img src={MedRecord}></img></div>
         </Col>
         </Row>
       </OTSession>
