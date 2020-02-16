@@ -23,6 +23,12 @@ const useStyles = makeStyles(theme => ({
     marginTop: theme.spacing(3.5),
     width: window.screen.width/2.055,
   },
+  textFieldTop: {
+    marginLeft: theme.spacing(1),
+    marginRight: theme.spacing(1),
+    marginTop: 45,
+    width: window.screen.width/2.055,
+  },
   Button: {
     borderRadius: '20px'
   }
@@ -42,7 +48,7 @@ export default function PatientView() {
           id="standard-full-width"
           label="Name"
           placeholder=""
-          className={classes.textField}
+          className={classes.textFieldTop}
           margin="dense"
           variant="filled"
         />
@@ -52,7 +58,7 @@ export default function PatientView() {
           defaultValue=""
           margin="dense"
           fullWidth
-          className={classes.textField}
+          className={classes.textFieldTop}
           variant="filled"
         />
         <br />
