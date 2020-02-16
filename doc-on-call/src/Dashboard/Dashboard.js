@@ -467,8 +467,9 @@ class Dashboard extends Component {
   render() {
 
     return (
-      <div className="animated fadeIn">
-        <Row>
+      <div style={{marginLeft: 20, marginRight: 20}}>
+        <div className="animated fadeIn">
+        <Row style={{marginBottom: 20}}>
           <Col xs="12" sm="6" lg="3">
             <Card className="text-white bg-info">
               <CardBody className="pb-0">
@@ -525,7 +526,7 @@ class Dashboard extends Component {
             </Card>
           </Col>
         </Row>
-        <Row>
+        <Row style={{marginBottom: 20}}>
           <Col>
             <Card>
               <CardBody>
@@ -581,6 +582,7 @@ class Dashboard extends Component {
           </Col>
         </Row>
         
+      </div>
       </div>
     );
   }
