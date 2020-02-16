@@ -62,18 +62,14 @@ class VideoDoctor extends React.Component {
         {this.state.error ? <div id="error">{this.state.error}</div> : null}
 
         <Row>
-        <Col>
-        </Col>
-        <div id = 'Publisher_Screen'>
-        <Publisher />
-        </div>
-        <Col>
-        </Col>
         <OTStreams >
-        <div id = 'Subscriber_Screen'>
+        <div style={{marginLeft:50}}>
           <Subscriber />
           </div>
         </OTStreams>
+        <div style={{marginLeft:50, position:"absolute"}}>
+        <Publisher />
+        </div>
         <Col>
           <div><img src={MedRecord}></img></div>
         </Col>

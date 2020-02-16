@@ -61,20 +61,14 @@ class VideoPatient extends React.Component {
         {this.state.error ? <div id="error">{this.state.error}</div> : null}
 
         <Row>
-        <Col>
-        </Col>
-        <div id = 'Publisher_Screen'>
-        <Publisher />
-        </div>
-        <Col>
-        </Col>
         <OTStreams >
-        <div id = 'Subscriber_Screen'>
+        <div style={{marginLeft:339}}>
           <Subscriber />
           </div>
         </OTStreams>
-        <Col>
-        </Col>
+        <div style={{marginLeft:339, position:"absolute"}}>
+        <Publisher />
+        </div>
         </Row>
       </OTSession>
       <br />
