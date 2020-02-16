@@ -10,9 +10,9 @@ function Copyright() {
   return (
     <Typography variant="body2" color="textSecondary">
       {'Copyright © '}
-      <Link color="inherit" href="https://material-ui.com/">
-        doconcall.online
-      </Link>{' '}
+      <a href="https://material-ui.com/">
+        Doconcall.online
+      </a>{' '}
       {new Date().getFullYear()}
       {'.'}
     </Typography>
@@ -40,14 +40,9 @@ export default function Footer() {
   const classes = useStyles();
 
   return (
-    <div className={classes.root}>
-      <CssBaseline />
-      <footer className={classes.footer}>
-        <Container maxWidth="sm">
-          <Typography variant="body1">Doc on Call</Typography>
-          <Copyright />
-        </Container>
-      </footer>
-    </div>
+    <footer class='m'>
+      <div class="titleOfDoc"><font color="white">Doc on Call</font></div>
+      <div class="copyright"><font color="white">Copyright ©2020, doconcall.com</font></div>
+    </footer>
   );
 }
