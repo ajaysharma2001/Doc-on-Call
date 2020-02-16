@@ -43,7 +43,13 @@ export default function DoctorView() {
   const classes = useStyles();
 
   return (
-    <Dashboard />
-    
+    <div>
+      <div class = "Button">
+        <form action="./VideoPatient">
+          <button type="submit" class="btn btn-primary">GO ON CALL</button>
+        </form>
+      </div>
+      <Dashboard />
+    </div>
   );
 }
