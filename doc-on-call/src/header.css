@@ -1,16 +1,24 @@
 h1 
 { 
-	font-family: Lato, sans-serif;
-	text-decoration-color: white
+	font-family: Lato, 'Times New Roman', Times, serif;
+	text-decoration-color: white;
 
 }
-header
- {
+.m
+{
 	background: rgb(66,91,255); 
 	background: radial-gradient(circle, rgba(66,91,255,1) 0%, rgba(161,174,255,1) 100%);
 	box-shadow: 0px 7px 25px gray;
 	margin-bottom: 25px;
-
-
-
+	align-items: center;
+}
+.left_image
+{
+	align-items: left;
+	justify-content: left;
+}
+.right_image
+{
+	align-items: right;
+	justify-content: right;
 }
