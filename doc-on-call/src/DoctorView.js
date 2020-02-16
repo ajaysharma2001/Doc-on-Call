@@ -45,7 +45,7 @@ export default function DoctorView() {
   return (
     <div>
       <div class = "Button">
-        <form action="./VideoPatient">
+        <form action="./VideoDoctor">
           <button type="submit" class="btn btn-primary">GO ON CALL</button>
         </form>
       </div>
