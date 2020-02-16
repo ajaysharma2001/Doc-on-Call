@@ -4,21 +4,25 @@ h1
 	text-decoration-color: white;
 
 }
-.m
-{
+.m{
 	background: rgb(66,91,255); 
 	background: radial-gradient(circle, rgba(66,91,255,1) 0%, rgba(161,174,255,1) 100%);
 	box-shadow: 0px 7px 25px gray;
 	margin-bottom: 25px;
 	align-items: center;
 }
-.left_image
-{
-	align-items: left;
-	justify-content: left;
+
+.left_image{
+	width: '10%';
+	background-color: black;
 }
-.right_image
-{
-	align-items: right;
-	justify-content: right;
+
+.middle_title{
+	width: '80%';
+	background-attachment: red;
+}
+
+.right_image{
+	width: '10%';
+	background-color: chartreuse;
 }
