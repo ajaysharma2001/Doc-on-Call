@@ -27,9 +27,7 @@ class Publisher extends React.Component {
       videoSource: 'camera'
     };
   }
-
   
-
   setAudio = (audio) => {
     this.setState({ audio });
   }
