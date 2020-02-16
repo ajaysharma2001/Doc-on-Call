@@ -40,9 +40,9 @@ export default function Footer() {
   const classes = useStyles();
 
   return (
-    <footer class='m'>
+    <footer class='f'>
       <div class="titleOfDoc"><font color="white">Doc on Call</font></div>
-      <div class="copyright"><font color="white">Copyright ©2020, doconcall.com</font></div>
+      <div class="copyright"><font color="white">Copyright ©2020, doconcall.online</font></div>
     </footer>
   );
 }

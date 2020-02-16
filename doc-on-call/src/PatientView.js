@@ -26,7 +26,7 @@ const useStyles = makeStyles(theme => ({
   textFieldTop: {
     marginLeft: theme.spacing(1),
     marginRight: theme.spacing(1),
-    marginTop: 45,
+    marginTop: 20,
     width: window.screen.width/2.055,
   },
   Button: {
@@ -92,7 +92,7 @@ export default function PatientView() {
           variant="filled"
         />
         <TextField
-          label="Have you used Doc On Call before?"
+          label="Have you used Doc on Call before?"
           id="margin-normal"
           defaultValue=""
           className={classes.textField}
@@ -127,7 +127,6 @@ export default function PatientView() {
       <button type="submit" class="btn btn-primary">Submit & Search</button>
       </form>
       </div>
-      <br />
     </div>
       </div>
 
