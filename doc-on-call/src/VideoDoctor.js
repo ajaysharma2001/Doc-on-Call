@@ -26,7 +26,7 @@ import {
   Table,
 } from 'reactstrap';
 
-class VideoPatient extends React.Component {
+class VideoDoctor extends React.Component {
   constructor(props) {
     super(props);
     this.state = {

@@ -5,6 +5,7 @@ import VideoPatient from './VideoPatient';
 import Header from './Header';
 import PatientView from './PatientView';
 import DoctorView from './DoctorView';
+import VideoDoctor from './VideoDoctor'
 import Footer from './Footer';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import config from './config';
@@ -26,6 +27,7 @@ class App extends React.Component {
             <Link to ='/VideoPatient'> </Link>
             <Link to ='/DoctorView'> </Link>
             <Link to ='/PatientView'></Link>
+            <Link to ='/VideoPatient'> </Link>
           </div>
           <Switch>
             <Route exact path="/VideoPatient" component>
@@ -33,6 +35,12 @@ class App extends React.Component {
               apiKey={config.API_KEY}
               sessionId={config.SESSION_ID}
               token={config.TOKEN}></VideoPatient>
+            </Route>
+            <Route exact path="/VideoDoctor" component>
+              <VideoDoctor
+              apiKey={config.API_KEY}
+              sessionId={config.SESSION_ID}
+              token={config.TOKEN}></VideoDoctor>
             </Route>
               <Route path="/PatientView" >
               <PatientView />
